@@ -1,5 +1,6 @@
 # 仿网易云
 
-HELLO
-
-WORLD
+安装包
+```
+npm install
+```
