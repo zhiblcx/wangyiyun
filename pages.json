@@ -1,17 +1,83 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/found/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/blog/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/concern/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/community/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		}
 	],
 	"globalStyle": {
+		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"tabBar": {
+		"color": "#94959a",
+		"selectedColor": "#f93a3e",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/found/index",
+				"iconPath": "static/found.png",
+				"selectedIconPath": "static/found-current.png",
+				"text": "发现"
+			},
+			{
+				"pagePath": "pages/blog/index",
+				"iconPath": "",
+				"selectedIconPath": "",
+				"text": "博客"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"iconPath": "",
+				"selectedIconPath": "",
+				"text": "我的"
+			},
+			{
+				"pagePath": "pages/concern/index",
+				"iconPath": "",
+				"selectedIconPath": "",
+				"text": "关注"
+			},
+			{
+				"pagePath": "pages/community/index",
+				"iconPath": "",
+				"selectedIconPath": "",
+				"text": "社区"
+			}
+		]
+	}
 }

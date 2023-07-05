@@ -8,16 +8,17 @@
 	</view>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			title: 'Hello'
-		};
-	},
-	onLoad() {},
-	methods: {}
-};
+<script setup>
+import { onMounted, inject } from 'vue';
+const apiUrl = inject('apiUrl');
+onMounted(() => {
+	uni.request({
+		url: apiUrl + '/artist/desc?id=6452',
+		success: function (res) {
+			console.log(res.data);
+		}
+	});
+});
 </script>
 
 <style>

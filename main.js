@@ -3,8 +3,8 @@ import App from './App'
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
+Vue.config.devtools = true;
 App.mpType = 'app'
-
 
 try {
 	function isPromise(obj) {
@@ -45,10 +45,16 @@ import {
 	createSSRApp
 } from 'vue'
 import vant from 'vant'
+import {
+	createPinia
+} from 'pinia'
 import 'vant/lib/index.css'
 export function createApp() {
 	const app = createSSRApp(App)
+	const pinia = createPinia()
+	app.use(pinia)
 	app.use(vant)
+	app.provide('apiUrl', 'https://netease-cloud-music-api-eight-tan.vercel.app');
 	return {
 		app
 	}
